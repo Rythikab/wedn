@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#111;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff9800;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff9800;
+}
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('../images/gym.jpg') center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    font-size:22px;
+    margin:20px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+    font-size:18px;
+}
+
+.btn:hover{
+    background:#e68900;
+}
+
+.services{
+    padding:60px;
+    text-align:center;
+}
+
+.services h2{
+    margin-bottom:40px;
+}
+
+.box{
+    width:300px;
+    display:inline-block;
+    margin:15px;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+
+.box h3{
+    color:#ff9800;
+    margin-bottom:15px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}

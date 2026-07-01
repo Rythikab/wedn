@@ -1,0 +1,27 @@
+De<button id="pay-btn">Pay ₹999</button>
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+var options = {
+    key: "rzp_test_T7rOtohC11lsWj",
+    key_secret: "xi62UTLC7ffvnnF5dZuLMO8b",
+    amount: 99900, 
+    currency: "INR",
+    name: "Smart Gym",
+    description: "Membership Payment",
+
+    handler: function (response) {
+        alert("Payment Successful!");
+        window.location.href = "success.html";
+    }
+};
+
+var rzp = new Razorpay(options);
+
+document.getElementById("pay-btn").onclick = function(e){
+    rzp.open();
+    e.preventDefault();
+}
+</script>

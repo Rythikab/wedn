@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Gym & Fitness</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="script.js">
+<link rel="stylesheet" href="about.html">
+<link rel="stylesheet" href="membership.html">
+<link rel="stylesheet" href="trainers.html">
+<link rel="stylesheet" href="payment.html">
+<link rel="stylesheet" href="success.html"> 
+
+</head>
+
+
+
+<body>
+    De<button id="pay-btn">Pay ₹999</button>
+           
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+var options = {
+    key: "rzp_test_T7rOtohC11lsWj",
+    key_secret: "xi62UTLC7ffvnnF5dZuLMO8b",
+    amount: 99900, 
+    currency: "INR",
+    name: "Smart Gym",
+    description: "Membership Payment",
+
+    handler: function (response) {
+        alert("Payment Successful!");
+        window.location.href = "success.html";
+    }
+};
+
+var rzp = new Razorpay(options);
+
+document.getElementById("pay-btn").onclick = function(e){
+    rzp.open();
+    e.preventDefault();
+}
+</script>
+
+<header>
+<div class="logo">SMART GYM</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="membership.html">Membership</a></li>
+<li><a href="trainers.html">Trainers</a></li>
+<li><a href="workout.html">Workout</a></li>
+<li><a href="diet.html">Diet</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="payment.html">Payment</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>WELCOME TO SMART GYM</h1>
+
+<p>Train Hard | Stay Healthy | Live Better</p>
+
+<a href="membership.html" class="btn">Join Now</a>
+
+</section>
+
+<section class="services">
+    <h2>Membership Plans</h2>
+
+<div class="box">
+<h3>Basic Plan</h3>
+<h2>₹999 / Month</h2>
+<p>✔ Gym Access</p>
+<p>✔ Cardio</p>
+<p>✔ Locker</p>
+<br>
+<a href="payment.html" class="btn">Pay Now</a>
+</div>
+
+<div class="box">
+<h3>Standard Plan</h3>
+<h2>₹1999 / Month</h2>
+<p>✔ Gym Access</p>
+<p>✔ Personal Trainer</p>
+<p>✔ Diet Plan</p>
+<br>
+<a href="payment.html" class="btn">Pay Now</a>
+</div>
+
+<div class="box">
+<h3>Premium Plan</h3>
+<h2>₹2999 / Month</h2>
+<p>✔ All Features</p>
+<p>✔ Personal Coach</p>
+<p>✔ Free Supplements Guide</p>
+<br>
+<a href="payment.html" class="btn">Pay Now</a>
+</div>
+ <h2>About Our Gym</h2>
+
+    <p>
+        Smart Gym & Fitness is a modern fitness center that helps members
+        achieve their health goals through expert trainers, advanced equipment,
+        personalized workout plans, and healthy diet guidance.
+    </p>
+
+    <br>
+
+    <div class="box">
+        <h3>Our Mission</h3>
+        <p>To inspire a healthy lifestyle through quality fitness programs.</p>
+    </div>
+
+    <div class="box">
+        <h3>Our Vision</h3>
+        <p>To become the leading smart fitness center with digital services.</p>
+    </div>
+
+    <div class="box">
+        <h3>Why Choose Us?</h3>
+        <p>Certified trainers, modern equipment, flexible membership, and secure online payment.</p>
+    </div>
+
+<h2>Our Services</h2>
+
+<div class="box">
+<h3>Personal Training</h3>
+<p>Certified trainers for individual coaching.</p>
+</div>
+
+<div class="box">
+<h3>Weight Loss</h3>
+<p>Special workout and diet plans.</p>
+</div>
+
+<div class="box">
+<h3>Muscle Building</h3>
+<p>Strength training programs.</p>
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Smart Gym & Fitness Management System</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
